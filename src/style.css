@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
 
 :root {
-  --bg-cl: rgba(245, 247, 248, 0.548);
 }
 
 html {
@@ -28,7 +27,7 @@ body {
   font-size: 24px;
   margin: 30px;
   padding: 30px;
-  background-color: var(--bg-cl);
+  background-color: white;
   border: 2px solid grey;
   border-radius: 10px;
   -webkit-box-shadow: 0px 8px 21px -1px rgba(89, 89, 89, 1);
@@ -39,6 +38,7 @@ body {
   justify-content: flex-start;
   align-items: center;
   height: 100vh;
+  width: 90%;
 }
 
 header,
@@ -58,7 +58,8 @@ header {
 }
 
 header h1 {
-  font-size: 3.5rem;
+  font-size: 4.5rem;
+  margin-bottom: 20px;
 }
 
 nav#btns-cont {
@@ -81,12 +82,11 @@ nav#btns-cont {
 .nav-btn:hover {
   cursor: pointer;
   text-decoration: underline;
-  /* background-color: rgb(206, 223, 240); */
 }
 
 .nav-btn.selected {
   background-color: rgb(136, 192, 226);
-  color: aliceblue;
+  color: white;
 }
 
 #content {
