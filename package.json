@@ -1,0 +1,30 @@
+{
+  "name": "restaurant-page",
+  "version": "1.0.0",
+  "description": "A small project to polish DOM manipulation skill and to practice working with Webpack.",
+  "homepage": "https://github.com/brianle169/restaurant-page#readme",
+  "bugs": {
+    "url": "https://github.com/brianle169/restaurant-page/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brianle169/restaurant-page.git"
+  },
+  "license": "ISC",
+  "author": "Minh Le - brianle169",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "dev": "webpack serve"
+  },
+  "devDependencies": {
+    "css-loader": "^7.1.2",
+    "html-loader": "^5.1.0",
+    "html-webpack-plugin": "^5.6.3",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.98.0",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.0"
+  }
+}
