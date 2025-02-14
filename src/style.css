@@ -1,8 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
 
-:root {
-}
-
 html {
   background-color: rgb(197, 223, 246);
   display: flex;
@@ -37,7 +34,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 100vh;
+  height: 100%;
   width: 90%;
 }
 
@@ -77,6 +74,7 @@ nav#btns-cont {
   border-radius: 10px;
   color: #36454f;
   padding: 10px 30px;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
 }
 
 .nav-btn:hover {
@@ -89,9 +87,53 @@ nav#btns-cont {
   color: white;
 }
 
-#content {
+.about {
   flex: 1;
   padding: 30px 10px;
+  height: 100%;
+}
+
+footer {
+  margin-top: 20px;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 50px;
+  gap: 20px;
+}
+
+.about h1 {
+  padding: 20px;
+  font-size: clamp(2rem, 3vw, 3rem);
+}
+
+.about-text {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 500;
+  max-width: 65ch;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  padding: 20px;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  margin-top: 20px;
+}
+
+.gallery img {
+  flex: 1;
+  width: 80%;
+  border-radius: 20px;
 }
 
 @media only screen and (min-width: 2100px) {
@@ -110,7 +152,22 @@ nav#btns-cont {
     font-size: 4.5rem;
   }
 
-  #content {
+  .about {
     padding: 20px 30px;
+  }
+}
+
+@media only screen and (min-width: 1700px) {
+  .gallery {
+    display: flex;
+    flex-direction: row;
+    height: 35vh;
+    gap: 50px;
+  }
+
+  .gallery img {
+    border-radius: 20px;
+    height: 100%;
+    width: auto;
   }
 }
