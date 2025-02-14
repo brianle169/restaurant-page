@@ -1,48 +1,84 @@
-import ab1 from "../../assets/ab1.jpg";
-import ab2 from "../../assets/ab2.jpg";
+const menuItem = function (name, description) {
+  const item = document.createElement("div");
+  item.classList.add("menu-item");
+
+  const itemName = document.createElement("p");
+  itemName.textContent = name;
+  itemName.classList.add("name");
+
+  const itemDescription = document.createElement("p");
+  itemDescription.textContent = description;
+  itemDescription.classList.add("detail");
+
+  item.appendChild(itemName);
+  item.appendChild(itemDescription);
+
+  return item;
+};
+
+const separator = function (str) {
+  const sep = document.createElement("span");
+  sep.textContent = str;
+  sep.classList.add("separator");
+  return sep;
+};
 
 export function MenuPage() {
   // Create the div container for about page
-  const aboutPage = document.createElement("div");
-  aboutPage.classList.add("about");
-  aboutPage.id = "content";
+  const menuPage = document.createElement("div");
+  menuPage.classList.add("menu");
+  menuPage.id = "content";
 
-  // Start creating other elements
   // 1. Title h1
   const title = document.createElement("h1");
-  title.textContent = "Menu";
+  title.textContent = "Prestige Menu";
 
-  // 2. Description p
-  const desPara1 = document.createElement("p");
-  const desPara2 = document.createElement("p");
-  desPara1.classList.add("about-text");
-  desPara2.classList.add("about-text");
-  desPara1.textContent =
-    "Pétrus is a restaurant in London, England. It was opened in 2010 by chef Gordon Ramsay. Pétrus was awarded a Michelin star in 2011. The restaurant was named after the French wine Pétrus. Pétrus is located in Belgravia, London. The restaurant has a capacity of 60 seats. Pétrus is known for its French cuisine.";
-  desPara2.textContent =
-    "Pétrus offers a tasting menu and an à la carte menu. The tasting menu consists of 6 courses. The tasting menu costs £120. The à la carte menu consists of 3 courses. The à la carte menu costs £60. Pétrus offers a wine pairing with the tasting menu. The wine pairing costs £60.";
+  // 2. Menu Items
+  let item1 = menuItem("Pissaladière", "Allium, mushrom dashi, anchovy");
+  let item2 = menuItem(
+    "Isle of Skye Scallop",
+    "Coastal herbs, lemon, olive oil sabayon"
+  );
+  let item3 = menuItem("Rack of Dover Sole", "Kohlrabi, yuzu, vadouvan");
+  let item4 = menuItem("Aynhoe Park Deer", "Beetroot, verjus, shiso");
+  let item5 = menuItem(
+    "Selection of British and French Cheeses",
+    "(£25 supplement)"
+  );
+  let item6 = menuItem("Sorbet", "Calvados, apple");
+  let item7 = menuItem("Truffle ice cream", "Bodega, almond (supplement £15)");
+  let item8 = menuItem("Plaisir Sucré", "Chocolate chémeux, hazelnut, milk");
 
-  // 3. Image Gallery
-  const gallery = document.createElement("div");
-  gallery.classList.add("gallery");
+  // 3. Price
+  const price = document.createElement("p");
+  price.textContent = "£150 per person";
 
-  // 4. Images
-  const img1 = document.createElement("img");
-  const img2 = document.createElement("img");
-  img1.src = ab1;
-  img1.alt = "ab1";
-  img2.src = ab2;
-  img2.alt = "ab2";
+  // 4. Extras' prices
+  const extras = document.createElement("p");
+  extras.classList.add("extras");
+  extras.innerHTML =
+    "Non-alcoholic pairing £70 <br> Matching wines £150 <br> Premium matching wines £190 <br> The Connoisseur matching wines £395";
 
-  // Append elements to gallery
-  gallery.appendChild(img1);
-  gallery.appendChild(img2);
+  menuPage.appendChild(title);
+  menuPage.appendChild(item1);
+  menuPage.appendChild(separator("~"));
+  menuPage.appendChild(item2);
+  menuPage.appendChild(separator("~"));
+  menuPage.appendChild(item3);
+  menuPage.appendChild(separator("~"));
+  menuPage.appendChild(item4);
+  menuPage.appendChild(separator("~"));
+  menuPage.appendChild(item5);
+  menuPage.appendChild(separator("~"));
+  menuPage.appendChild(item6);
+  menuPage.appendChild(separator("or"));
+  menuPage.appendChild(item7);
+  menuPage.appendChild(separator("~"));
+  menuPage.appendChild(item8);
+  menuPage.appendChild(separator(""));
+  menuPage.appendChild(price);
+  menuPage.appendChild(separator(""));
+  menuPage.appendChild(extras);
 
-  // Append elements to aboutPage
-  aboutPage.appendChild(title);
-  aboutPage.appendChild(desPara1);
-  aboutPage.appendChild(desPara2);
-  aboutPage.appendChild(gallery);
-
-  return aboutPage;
+  return menuPage;
 }
