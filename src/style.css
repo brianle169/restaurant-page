@@ -195,7 +195,7 @@ footer .credit {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 60%;
+  width: 100%;
   padding: 20px;
 }
 
@@ -204,7 +204,7 @@ footer .credit {
   flex-direction: column;
   gap: 10px;
   margin: 10px;
-  width: 75%;
+  width: 100%;
 }
 
 #reservation-form .form-entry label {
@@ -256,7 +256,7 @@ button[type="submit"] {
   color: white;
   font-weight: 600;
   margin-top: 20px;
-  width: 40%;
+  width: 80%;
   align-self: center;
 }
 
@@ -298,5 +298,24 @@ button[type="submit"]:hover {
     border-radius: 20px;
     height: 100%;
     width: auto;
+  }
+
+  #reservation-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    padding: 20px;
+  }
+
+  #reservation-form .form-entry {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px;
+  }
+
+  button[type="submit"] {
+    width: 40%;
   }
 }
