@@ -1,48 +1,82 @@
-import ab1 from "../../assets/ab1.jpg";
-import ab2 from "../../assets/ab2.jpg";
-
 export function ReservationPage() {
   // Create the div container for about page
   const aboutPage = document.createElement("div");
-  aboutPage.classList.add("about");
+  aboutPage.classList.add("reservation");
   aboutPage.id = "content";
-
-  // Start creating other elements
-  // 1. Title h1
-  const title = document.createElement("h1");
-  title.textContent = "Reservation";
-
-  //   // 2. Description p
-  //   const desPara1 = document.createElement("p");
-  //   const desPara2 = document.createElement("p");
-  //   desPara1.classList.add("about-text");
-  //   desPara2.classList.add("about-text");
-  //   desPara1.textContent =
-  //     "Pétrus is a restaurant in London, England. It was opened in 2010 by chef Gordon Ramsay. Pétrus was awarded a Michelin star in 2011. The restaurant was named after the French wine Pétrus. Pétrus is located in Belgravia, London. The restaurant has a capacity of 60 seats. Pétrus is known for its French cuisine.";
-  //   desPara2.textContent =
-  //     "Pétrus offers a tasting menu and an à la carte menu. The tasting menu consists of 6 courses. The tasting menu costs £120. The à la carte menu consists of 3 courses. The à la carte menu costs £60. Pétrus offers a wine pairing with the tasting menu. The wine pairing costs £60.";
-
-  //   // 3. Image Gallery
-  //   const gallery = document.createElement("div");
-  //   gallery.classList.add("gallery");
-
-  //   // 4. Images
-  //   const img1 = document.createElement("img");
-  //   const img2 = document.createElement("img");
-  //   img1.src = ab1;
-  //   img1.alt = "ab1";
-  //   img2.src = ab2;
-  //   img2.alt = "ab2";
-
-  //   // Append elements to gallery
-  //   gallery.appendChild(img1);
-  //   gallery.appendChild(img2);
-
-  // Append elements to aboutPage
-  aboutPage.appendChild(title);
-  //   aboutPage.appendChild(desPara1);
-  //   aboutPage.appendChild(desPara2);
-  //   aboutPage.appendChild(gallery);
+  aboutPage.innerHTML = `<h1>Reservation Information</h1>
+      <form action="" method="get" id="reservation-form">
+        <div class="form-entry">
+          <label for="first-name">First name</label
+          ><input
+            type="text"
+            id="first-name"
+            name="first-name"
+            placeholder="Ex: Minh"
+            required
+          />
+          <span></span>
+        </div>
+        <div class="form-entry">
+          <label for="last-name">Last name</label
+          ><input
+            type="text"
+            id="last-name"
+            name="last-name"
+            placeholder="Ex: Le"
+            required
+          />
+          <span></span>
+        </div>
+        <div class="form-entry">
+          <label for="phone-number">Phone number</label
+          ><input
+            type="tel"
+            id="phone-number"
+            name="phone-number"
+            pattern="[0-9]{10}"
+            placeholder="Ex: 438-999-9999"
+            required
+          />
+          <span></span>
+        </div>
+        <div class="form-entry">
+          <label for="email">Email</label
+          ><input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Ex: abc@def.xyz"
+            required
+          />
+          <span></span>
+        </div>
+        <div class="form-entry">
+          <label for="party-size">Party size</label
+          ><input
+            type="number"
+            id="party-size"
+            name="party-size"
+            min="1"
+            max="10"
+            required
+          />
+          <span></span>
+        </div>
+        <div class="form-entry">
+          <label for="allergy">Please specify you allergies (if any) so we can serve you better:</label
+          >
+            <textarea
+                id="allergy"
+                name="allergy"
+                rows="5"
+                cols="50"
+                placeholder="Ex: I am allergic to peanuts"></textarea>
+          <span></span>
+        </div>
+         <div class="form-entry submission">
+          <button type="submit">Complete your booking</button>
+        </div>
+      </form>`;
 
   return aboutPage;
 }

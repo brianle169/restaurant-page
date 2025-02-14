@@ -85,6 +85,7 @@ nav#btns-cont {
 .nav-btn.selected {
   background-color: rgb(136, 192, 226);
   color: white;
+  text-decoration: underline;
 }
 
 .about {
@@ -98,6 +99,7 @@ footer {
   padding: 20px;
   width: 100%;
   text-align: center;
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
 }
 
 footer .credit {
@@ -106,7 +108,8 @@ footer .credit {
   font-weight: 400;
 }
 
-#content.about {
+#content.about,
+#content.reservation {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -114,7 +117,8 @@ footer .credit {
   gap: 20px;
 }
 
-#content.about h1 {
+#content.about h1,
+#content.reservation h1 {
   padding: 20px;
   font-size: clamp(2rem, 3vw, 3rem);
 }
@@ -179,6 +183,86 @@ footer .credit {
 
 #content.menu .extras {
   margin-bottom: 30px;
+}
+
+#content.reservation {
+  display: flex;
+  justify-content: center;
+  margin: 20px 50px;
+}
+
+#reservation-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  padding: 20px;
+}
+
+#reservation-form .form-entry {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 10px;
+  width: 75%;
+}
+
+#reservation-form .form-entry label {
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  font-weight: 600;
+}
+
+#reservation-form .form-entry input,
+#reservation-form .form-entry textarea {
+  font-size: 1.3rem;
+  padding: 10px 15px;
+  font-weight: 500;
+  border-radius: 10px;
+  /* border: none; */
+  outline: none;
+  border: 3px solid #36454f;
+  width: 100%;
+}
+
+#reservation-form .form-entry input::placeholder,
+#reservation-form .form-entry textarea::placeholder {
+  font-style: italic;
+}
+
+.form-entry input:user-invalid {
+  box-shadow: 4px 4px 5px 0px rgb(241 6 6);
+}
+
+input + span,
+select + span {
+  position: relative;
+}
+
+input:required + span::after,
+select:required + span::after {
+  content: "*";
+  color: red;
+  position: absolute;
+  top: -90px;
+  right: 8px;
+}
+
+button[type="submit"] {
+  font-size: 1.5rem;
+  padding: 20px 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: #36454f;
+  color: white;
+  font-weight: 600;
+  margin-top: 20px;
+  width: 40%;
+  align-self: center;
+}
+
+button[type="submit"]:hover {
+  cursor: pointer;
+  background-color: #455864;
 }
 
 @media only screen and (min-width: 2100px) {

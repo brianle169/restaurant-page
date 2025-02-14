@@ -10,10 +10,10 @@ const mainModule = (() => {
   let currentTarget;
 
   let windowLoadHandler = () => {
-    content.insertAdjacentElement("afterend", MenuPage());
-    navBtns[1].classList.add("selected");
-    currentPage = navBtns[1].value;
-    currentTarget = navBtns[1];
+    content.insertAdjacentElement("afterend", ReservationPage());
+    navBtns[2].classList.add("selected");
+    currentPage = navBtns[2].value;
+    currentTarget = navBtns[2];
   };
 
   let navClickHandler = (event) => {
